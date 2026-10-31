@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f4ecdf">
+  <meta name="description" content="Daniel Nadal — Information Technology student working in technical support, databases, and responsive front-end development. Projects, certifications, and academic record.">
+  <title>Daniel Nadal — Quiet Systems</title>
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%231b1b2c'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%23f7ead9' stroke-opacity='.55'/%3E%3Cpath d='M16 8a8 8 0 0 1 0 16Z' fill='%23ffb27e'/%3E%3C/svg%3E">
+
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        var dark = saved ? saved === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = dark ? "dark" : "light";
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="preload" href="assets/fonts/BricolageGrotesque-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/Manrope-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/InstrumentSerif-Italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=4">
+  <script src="script.js?v=3" defer></script>
+</head>
+
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="atmosphere" aria-hidden="true">
+    <div class="atmosphere__bloom atmosphere__bloom--peach"></div>
+    <div class="atmosphere__bloom atmosphere__bloom--lilac"></div>
+    <div class="atmosphere__bloom atmosphere__bloom--sky"></div>
+    <div class="atmosphere__bloom atmosphere__bloom--jade"></div>
+    <div class="atmosphere__light"></div>
+  </div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="topbar__inner">
+      <button class="brand" type="button" data-theme-toggle aria-pressed="false">
+        <svg class="brand__mark" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="9.25" fill="none" stroke="currentColor" stroke-opacity=".35"/>
+          <path d="M12 2.75a9.25 9.25 0 0 1 0 18.5Z" fill="currentColor"/>
+          <circle cx="12" cy="12" r="3" fill="#ff9d72"/>
+        </svg>
+        <span class="brand__name">Nadal</span>
+        <span class="brand__descriptor">Quiet Systems</span>
+        <span class="visually-hidden" data-theme-label>Switch to dark theme</span>
+      </button>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#credentials">Credentials</a>
+        <a href="#recognition">Recognition</a>
+        <a href="#leadership">Leadership</a>
+      </nav>
+
+      <a class="button button--small topbar__cta" href="#contact">
+        Email me
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5"/></svg>
+      </a>
+
+      <details class="mobile-nav">
+        <summary aria-label="Open navigation" aria-expanded="false">
+          <span class="waffle" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        </summary>
+        <nav class="mobile-nav__panel" aria-label="Mobile navigation">
+          <a href="#about"><span>01</span> About</a>
+          <a href="#expertise"><span>02</span> Expertise</a>
+          <a href="#projects"><span>03</span> Projects</a>
+          <a href="#experience"><span>04</span> Experience</a>
+          <a href="#credentials"><span>05</span> Credentials</a>
+          <a href="#recognition"><span>06</span> Recognition</a>
+          <a href="#leadership"><span>07</span> Leadership</a>
+          <a href="#contact"><span>08</span> Contact</a>
+        </nav>
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- 01 · HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="shell hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">
+            <span class="eyebrow__dot"></span>
+            Information Technology · Cavite, Philippines
+          </p>
+
+          <h1 id="hero-title" class="hero__title">
+            Technology,<br>
+            <em>made quiet.</em>
+          </h1>
+
+          <p class="hero__lede">
+            I’m Daniel Nadal, an Information Technology student working across
+            technical support, database fundamentals, and front-end development.
+            I document systems clearly, troubleshoot methodically, and build
+            interfaces that explain themselves.
+          </p>
+
+          <div class="hero__actions">
+            <a class="button" href="#projects">
+              Explore my work
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5"/></svg>
+            </a>
+            <a class="text-link" href="assets/Daniel-Nadal-Resume.pdf" download>Download résumé <span aria-hidden="true">↓</span></a>
+          </div>
+
+          <ul class="hero__signals" aria-label="Areas of practice">
+            <li><span>01</span> Technical support</li>
+            <li><span>02</span> Data &amp; documentation</li>
+            <li><span>03</span> Front-end foundations</li>
+          </ul>
+        </div>
+
+        <figure class="portrait">
+          <div class="portrait__frame">
+            <img
+              src="assets/portrait-hero.jpg"
+              alt="Portrait of Daniel Nadal outdoors in Cavite"
+              width="1000" height="1333" fetchpriority="high">
+            <div class="portrait__wash" aria-hidden="true"></div>
+          </div>
+          <figcaption>
+            <span class="status"><span class="status__dot"></span> Open to entry-level IT roles</span>
+            <span class="portrait__place">Imus, Cavite · PH</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="shell hero__foot">
+        <a class="scroll-cue" href="#about">
+          <span class="scroll-cue__line" aria-hidden="true"></span>
+          Read the record
+        </a>
+        <p class="hero__edition">Portfolio · 2026</p>
+      </div>
+    </section>
+
+    <!-- 02 · ABOUT / ACADEMIC PROGRESS -->
+    <section class="section premise" id="about" aria-labelledby="about-title">
+      <div class="shell">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span>01</span> Academic profile</p>
+          <p class="section-head__note">BS Information Technology · 2023—2026</p>
+        </div>
+
+        <div class="premise__grid">
+          <h2 id="about-title" class="display reveal">
+            Good systems are built twice: once to work, and once to be <em>understood.</em>
+          </h2>
+
+          <div class="premise__copy reveal">
+            <p>
+              Quiet Systems is the principle behind my practice. Technology should
+              reduce friction, not relocate it. I approach support as diagnosis,
+              data as stewardship, and interfaces as communication.
+            </p>
+            <p>
+              My background combines front-line customer operations with academic
+              work in systems analysis, database management, and software
+              development. That mix has taught me to translate technical problems
+              into clear decisions — and to document the fix so the next person
+              does not have to start over.
+            </p>
+            <a class="text-link" href="#projects">See how that looks in practice <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+
+        <div class="academic-strip reveal" aria-label="Academic progress at a glance">
+          <div><span class="academic-strip__figure">2026</span><p>BS Information Technology · Class of 2026</p></div>
+          <div><span class="academic-strip__figure">05</span><p>Industry certifications earned</p></div>
+          <div><span class="academic-strip__figure">03</span><p>Completed Cisco and Oracle courses</p></div>
+          <div><span class="academic-strip__figure">01</span><p>First-place competition award</p></div>
+        </div>
+
+        <div class="principles">
+          <article class="principle reveal">
+            <span class="principle__index">01</span>
+            <h3>Diagnose before prescribing</h3>
+            <p>Understand the user, the system, and the constraint before choosing a fix.</p>
+          </article>
+          <article class="principle reveal">
+            <span class="principle__index">02</span>
+            <h3>Document for the next person</h3>
+            <p>Clear records turn individual effort into organisational memory.</p>
+          </article>
+          <article class="principle reveal">
+            <span class="principle__index">03</span>
+            <h3>Design for the real user</h3>
+            <p>Interfaces should reduce cognitive load, not add another manual.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 · EXPERTISE -->
+    <section class="section services" id="expertise" aria-labelledby="expertise-title">
+      <div class="shell">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span>02</span> Technical expertise</p>
+          <p class="section-head__note">Support · Data · Front end</p>
+        </div>
+
+        <div class="services__intro">
+          <h2 id="expertise-title" class="display reveal">
+            A practical toolkit for everyday <em>systems.</em>
+          </h2>
+          <p class="services__note reveal">
+            The work is often the reliable middle: resolving issues accurately,
+            keeping records trustworthy, and leaving interfaces easier to use than
+            they were found.
+          </p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service reveal">
+            <div class="service__top">
+              <span class="service__index">01</span>
+              <span class="service__mark" aria-hidden="true">↗</span>
+            </div>
+            <h3>Support &amp; operations</h3>
+            <p>
+              Front-line troubleshooting across phone, chat, and email; account and
+              subscription support; hardware and software diagnostics; and
+              escalation notes that preserve the details the next team needs.
+            </p>
+            <ul class="tags" aria-label="Support skills">
+              <li>Technical support</li>
+              <li>Troubleshooting</li>
+              <li>Documentation</li>
+            </ul>
+          </article>
+
+          <article class="service reveal">
+            <div class="service__top">
+              <span class="service__index">02</span>
+              <span class="service__mark" aria-hidden="true">↗</span>
+            </div>
+            <h3>Data &amp; reporting</h3>
+            <p>
+              Relational database fundamentals, clean records, basic queries, and
+              reporting. I apply consistent data practices so information remains
+              findable, accurate, and usable by other people.
+            </p>
+            <ul class="tags" aria-label="Data skills">
+              <li>Databases</li>
+              <li>SQL fundamentals</li>
+              <li>Reporting</li>
+            </ul>
+          </article>
+
+          <article class="service reveal">
+            <div class="service__top">
+              <span class="service__index">03</span>
+              <span class="service__mark" aria-hidden="true">↗</span>
+            </div>
+            <h3>Front-end foundations</h3>
+            <p>
+              Semantic HTML, responsive CSS, and accessible layout. I turn a visual
+              direction into a maintainable interface, with attention to
+              performance, readability, and real device behaviour.
+            </p>
+            <ul class="tags" aria-label="Web skills">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Responsive design</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="skill-matrix reveal" aria-label="Technical skills by category">
+          <div><span>Support</span><p>Windows · Hardware diagnostics · Ticket documentation · Remote troubleshooting</p></div>
+          <div><span>Data</span><p>Relational databases · SQL fundamentals · Data modelling · Records management</p></div>
+          <div><span>Development</span><p>HTML5 · CSS3 · Responsive design · Accessibility · Git fundamentals</p></div>
+          <div><span>Product</span><p>Requirements analysis · User flows · Project coordination · UI/UX design</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 · PROJECTS -->
+    <section class="section projects" id="projects" aria-labelledby="projects-title">
+      <div class="shell">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span>03</span> Projects</p>
+          <p class="section-head__note">Academic · Individual · Team</p>
+        </div>
+
+        <div class="projects__intro">
+          <h2 id="projects-title" class="display reveal">From requirement to <em>prototype.</em></h2>
+          <p class="projects__note reveal">
+            Selected academic work with my specific contribution stated plainly.
+            Supporting diagrams and evidence are included where available.
+          </p>
+        </div>
+
+        <!-- Featured IoT project -->
+        <article class="project-feature reveal">
+          <div class="project-feature__head">
+            <p class="project-kicker"><span class="status__dot"></span> IoT project · Completed</p>
+            <span class="project-badge project-badge--done">Completed</span>
+          </div>
+
+          <div class="project-feature__grid">
+            <div class="project-feature__copy">
+              <h3>AI-Integrated IoT Smart Plate for Food Weight Recognition and Portion Optimization</h3>
+              <p class="project-lede">
+                A dining plate with embedded load sensors that records food weight and
+                synchronises it with a mobile application. The system removes manual
+                food logging, reduces unit-conversion errors, and makes portion
+                tracking easier to sustain.
+              </p>
+
+              <dl class="project-meta">
+                <div><dt>Role</dt><dd>Project Manager / UI-UX</dd></div>
+                <div><dt>Timeline</dt><dd>2026</dd></div>
+                <div><dt>Status</dt><dd>Completed</dd></div>
+              </dl>
+
+              <div class="project-block">
+                <h4>Objectives</h4>
+                <ul class="clean-list">
+                  <li>Provide real-time food-weight measurement through an integrated plate.</li>
+                  <li>Automatically synchronise readings with a mobile application.</li>
+                  <li>Reduce manual entry, repetitive logging, and unit-conversion errors.</li>
+                </ul>
+              </div>
+
+              <div class="project-block">
+                <h4>Technologies &amp; components</h4>
+                <ul class="tags tags--wide" aria-label="IoT project technologies">
+                  <li>Load cell</li><li>HX711 amplifier</li><li>ESP32</li><li>Arduino IDE</li>
+                  <li>TensorFlow.js</li><li>React</li><li>Next.js</li><li>Node.js</li>
+                  <li>Express.js</li><li>MongoDB Atlas</li><li>IndexedDB</li><li>NoSQL</li>
+                </ul>
+              </div>
+            </div>
+
+            <aside class="project-feature__side">
+              <figure class="architecture">
+                <figcaption>System architecture</figcaption>
+                <div class="arch-flow">
+                  <div class="arch-node"><span>Sensing</span><strong>Load cell + HX711</strong></div>
+                  <div class="arch-arrow" aria-hidden="true">↓</div>
+                  <div class="arch-node"><span>Processing</span><strong>ESP32 · Arduino IDE</strong></div>
+                  <div class="arch-arrow" aria-hidden="true">↓</div>
+                  <div class="arch-node"><span>Service</span><strong>Node · Express · MongoDB Atlas</strong></div>
+                  <div class="arch-arrow" aria-hidden="true">↓</div>
+                  <div class="arch-node"><span>Interface</span><strong>Next.js · React · TensorFlow.js</strong></div>
+                </div>
+                <p class="diagram-caption">Diagram prepared by Daniel Nadal from the project architecture.</p>
+              </figure>
+            </aside>
+          </div>
+
+          <div class="project-contribution">
+            <div>
+              <h4>My contribution</h4>
+              <p>
+                As project manager and UI/UX lead, I coordinated scope and task
+                planning, defined the logging and portion-review user flow, shaped
+                the dashboard interface, and aligned hardware requirements with the
+                software team.
+              </p>
+            </div>
+            <div>
+              <h4>Output</h4>
+              <p>
+                The plate and application are built and working together: the load
+                cell reads weight through the HX711 and ESP32, and each reading is
+                stored and presented for portion review. The project established the
+                sensing and logging foundation that the separate capstone project
+                below builds on.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Featured capstone -->
+        <article class="project-feature project-feature--capstone reveal">
+          <div class="project-feature__head">
+            <p class="project-kicker"><span class="status__dot"></span> Capstone project · Team of five</p>
+            <span class="project-badge project-badge--done">Documentation complete</span>
+          </div>
+
+          <div class="project-feature__grid">
+            <div class="project-feature__copy">
+              <h3>Intelligent Food Scale with Behavior-Aware AI for Real-Time Dietary Optimization and Health Risk Prediction</h3>
+              <p class="project-lede">
+                A Bluetooth-enabled food scale paired with a Progressive Web App. The
+                scale measures each serving, the app calculates its nutritional value,
+                records eating habits over time, and returns personalised dietary
+                suggestions with informational health-risk indicators.
+              </p>
+
+              <dl class="project-meta">
+                <div><dt>Role</dt><dd>UI/UX · Front-end · Research</dd></div>
+                <div><dt>Timeline</dt><dd>2026</dd></div>
+                <div><dt>Status</dt><dd>Build and documentation complete; evaluation in progress</dd></div>
+              </dl>
+
+              <div class="project-block">
+                <h4>Objectives</h4>
+                <ul class="clean-list">
+                  <li>Automate weight measurement and nutritional calculation through a connected scale and PWA.</li>
+                  <li>Identify recurring dietary patterns from logged meals.</li>
+                  <li>Return personalised dietary suggestions and informational health-risk indicators.</li>
+                </ul>
+              </div>
+
+              <div class="project-block">
+                <h4>Technologies</h4>
+                <ul class="tags tags--wide" aria-label="Capstone technologies">
+                  <li>React</li><li>Progressive Web App</li><li>ESP32</li>
+                  <li>Bluetooth Low Energy</li><li>MongoDB Atlas</li>
+                  <li>IndexedDB</li><li>AI-assisted dietary analysis</li>
+                </ul>
+              </div>
+            </div>
+
+            <aside class="project-feature__side">
+              <div class="capstone-side">
+                <h4>Team</h4>
+                <ul class="team-list">
+                  <li>Marlon Elexie P. Aguilar</li>
+                  <li>Ken Ashley D. Cabrales</li>
+                  <li>Edel Jhim M. Naag</li>
+                  <li>Daniel Angelo C. Nadal</li>
+                  <li>Andrei Justyn F. Sesbreño</li>
+                </ul>
+                <p class="diagram-caption">Project adviser: Prof. Ricardo Dela Cruz</p>
+
+                <h4>Documentation</h4>
+                <p class="diagram-caption">
+                  The capstone paper covers the system framework, objectives,
+                  methodology, development timeline, and testing procedures.
+                  Evaluation results are still being finalised.
+                </p>
+              </div>
+            </aside>
+          </div>
+
+          <div class="project-contribution">
+            <div>
+              <h4>My contribution</h4>
+              <p>
+                I designed the interface and user flows for the PWA, built the
+                front-end screens that present weight, nutrition, and history, and
+                contributed the research that shaped the dietary-analysis features.
+              </p>
+            </div>
+            <div>
+              <h4>Relationship to the IoT project</h4>
+              <p>
+                The capstone is a related but separate build from the IoT smart plate
+                above. The IoT project proved the sensing and logging flow; the
+                capstone extends that idea into a team-built scale and PWA with
+                behaviour-aware analysis.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <h3 class="project-subhead reveal">Independent project</h3>
+        <div class="project-grid project-grid--single">
+          <article class="project-card reveal">
+            <div class="project-card__top">
+              <span>Independent · 2026</span>
+              <span class="project-badge project-badge--done">Completed</span>
+            </div>
+            <h3>Quiet Systems Portfolio</h3>
+            <p>
+              A single-page portfolio built around a continuous colour field,
+              responsive navigation, theme switching, and accessible motion. The
+              project demonstrates semantic HTML, modern CSS layout, and progressive
+              enhancement without a framework.
+            </p>
+            <dl class="project-meta project-meta--compact">
+              <div><dt>Role</dt><dd>Sole designer &amp; developer</dd></div>
+              <div><dt>Stack</dt><dd>HTML5 · CSS3 · minimal JavaScript</dd></div>
+              <div><dt>Evidence</dt><dd><a href="#top">This live site</a></dd></div>
+            </dl>
+          </article>
+        </div>
+
+        <h3 class="project-subhead reveal">Third-year course projects</h3>
+        <div class="project-grid project-grid--two">
+          <article class="project-card reveal">
+            <div class="project-card__top">
+              <span>Networking · 2026</span>
+              <span class="project-badge project-badge--done">Completed</span>
+            </div>
+            <h3>Cisco Packet Tracer Lab Series</h3>
+            <p>
+              Introductory network simulation exercises covering device setup,
+              connectivity testing, and basic network behaviour in Cisco Packet
+              Tracer.
+            </p>
+            <dl class="project-meta project-meta--compact">
+              <div><dt>My contribution</dt><dd>Individual lab work and configuration</dd></div>
+              <div><dt>Tools</dt><dd>Cisco Packet Tracer · Networking fundamentals</dd></div>
+              <div><dt>Evidence</dt><dd><a href="assets/certs/Cisco-Packet-Tracer.pdf" target="_blank" rel="noopener">Course certificate ↗</a></dd></div>
+            </dl>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card__top">
+              <span>Programming · 2024</span>
+              <span class="project-badge project-badge--done">Completed</span>
+            </div>
+            <h3>Java Foundations Coursework</h3>
+            <p>
+              Oracle Academy coursework covering Java syntax, control flow,
+              methods, and object-oriented fundamentals, completed through a final
+              examination.
+            </p>
+            <dl class="project-meta project-meta--compact">
+              <div><dt>My contribution</dt><dd>Individual coursework and final exam</dd></div>
+              <div><dt>Tools</dt><dd>Java · Object-oriented programming</dd></div>
+              <div><dt>Evidence</dt><dd><a href="assets/certs/Oracle-Java-Foundations.pdf" target="_blank" rel="noopener">Completion award ↗</a></dd></div>
+            </dl>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card__top">
+              <span>Data · 2025</span>
+              <span class="project-badge project-badge--done">Certified</span>
+            </div>
+            <h3>Relational Database Fundamentals</h3>
+            <p>
+              Applied database exercises in tables, relationships, records, and
+              query logic, supported by the Certiport Information Technology
+              Specialist — Databases certification.
+            </p>
+            <dl class="project-meta project-meta--compact">
+              <div><dt>My contribution</dt><dd>Individual database exercises</dd></div>
+              <div><dt>Tools</dt><dd>Relational databases · SQL fundamentals</dd></div>
+              <div><dt>Evidence</dt><dd><a href="assets/certs/Certiport-Databases.pdf" target="_blank" rel="noopener">Certification ↗</a></dd></div>
+            </dl>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card__top">
+              <span>IoT · 2026</span>
+              <span class="project-badge project-badge--done">Completed</span>
+            </div>
+            <h3>AI-Integrated IoT Smart Plate</h3>
+            <p>
+              The featured IoT project above: a connected plate and application for
+              automatic food-weight logging and portion review.
+            </p>
+            <dl class="project-meta project-meta--compact">
+              <div><dt>My contribution</dt><dd>Project management · UI/UX</dd></div>
+              <div><dt>Tools</dt><dd>ESP32 · React · Next.js · MongoDB</dd></div>
+              <div><dt>Evidence</dt><dd><a href="#projects">Project brief &amp; diagram ↑</a></dd></div>
+            </dl>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 · EXPERIENCE -->
+    <section class="section record" id="experience" aria-labelledby="experience-title">
+      <div class="shell">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span>04</span> Professional experience</p>
+          <p class="section-head__note">Bacoor, Cavite · 2023—2026</p>
+        </div>
+
+        <div class="record__intro">
+          <h2 id="experience-title" class="display reveal">Practice, in the <em>real world.</em></h2>
+          <p class="record__note reveal">
+            Two environments, one throughline: stay accurate, communicate clearly,
+            and keep the operation moving.
+          </p>
+        </div>
+
+        <ol class="timeline">
+          <li class="timeline__item reveal">
+            <div class="timeline__meta">
+              <span class="timeline__date">Jul 2024 — Jan 2026</span>
+              <span class="timeline__place">Bacoor, Cavite</span>
+            </div>
+            <div class="timeline__body">
+              <h3>Customer Support Representative</h3>
+              <p class="timeline__company">Teleperformance</p>
+              <ul class="timeline__list">
+                <li>Resolved account, billing, and bundle-subscription concerns across phone, live chat, and email.</li>
+                <li>Applied structured troubleshooting to diagnose issues and route them to accurate, timely resolutions.</li>
+                <li>Maintained quality and composure in a high-volume, target-driven service environment.</li>
+              </ul>
+              <ul class="tags" aria-label="Experience skills">
+                <li>Blended support</li>
+                <li>Issue resolution</li>
+                <li>Multichannel</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__meta">
+              <span class="timeline__date">Apr 2023 — May 2023</span>
+              <span class="timeline__place">Bacoor, Cavite</span>
+            </div>
+            <div class="timeline__body">
+              <h3>Operations Assistant</h3>
+              <p class="timeline__company">GoodHands Water Specialist</p>
+              <ul class="timeline__list">
+                <li>Supported daily operations with accuracy, punctuality, and adherence to quality standards.</li>
+                <li>Kept the workplace organised and ready — the groundwork behind reliable service.</li>
+                <li>Built lasting habits in teamwork, time management, and attention to detail.</li>
+              </ul>
+              <ul class="tags" aria-label="Experience skills">
+                <li>Operations</li>
+                <li>Quality</li>
+                <li>Teamwork</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 06 · CREDENTIALS -->
+    <section class="section credentials" id="credentials" aria-labelledby="credentials-title">
+      <div class="shell">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span>05</span> Credentials</p>
+          <p class="section-head__note">Education · Certification · Courses</p>
+        </div>
+
+        <div class="credentials__grid">
+          <div class="education reveal">
+            <p class="education__label">Education</p>
+            <h2 id="credentials-title" class="education__title">
+              BS Information<br>Technology
+            </h2>
+            <p class="education__school">Saint Dominic College of Asia</p>
+            <p class="education__date">2023 — 2026</p>
+            <p class="education__copy">
+              Coursework in process design, project management, database management,
+              systems analysis, and software development.
+            </p>
+            <a class="text-link" href="assets/Daniel-Nadal-Resume.pdf" download>
+              Download full résumé <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+
+          <div class="credential-lists">
+            <div class="certs reveal">
+              <div class="certs__head">
+                <p class="education__label">Industry certifications</p>
+                <span>05</span>
+              </div>
+              <ul class="cert-list">
+                <li>
+                  <div>
+                    <span class="cert-list__title">IT Specialist — Databases</span>
+                    <span class="cert-list__issuer">Certiport · May 7, 2025</span>
+                  </div>
+                  <a class="credential-link" href="assets/certs/Certiport-Databases.pdf" target="_blank" rel="noopener" aria-label="View PDF — Certiport Databases certificate (opens in new tab)">View PDF ↗</a>
+                </li>
+                <li>
+                  <div>
+                    <span class="cert-list__title">IT Specialist — HTML &amp; CSS</span>
+                    <span class="cert-list__issuer">Certiport · Feb 4, 2026</span>
+                  </div>
+                  <a class="credential-link" href="assets/certs/Certiport-HTML-CSS.pdf" target="_blank" rel="noopener" aria-label="View PDF — Certiport HTML and CSS certificate (opens in new tab)">View PDF ↗</a>
+                </li>
+                <li>
+                  <div>
+                    <span class="cert-list__title">IT Specialist — Artificial Intelligence</span>
+                    <span class="cert-list__issuer">Certiport · Jun 3, 2026</span>
+                  </div>
+                  <a class="credential-link" href="assets/certs/Certiport-AI-Specialist.pdf" target="_blank" rel="noopener" aria-label="View PDF — Certiport Artificial Intelligence certificate (opens in new tab)">View PDF ↗</a>
+                </li>
+                <li>
+                  <div>
+                    <span class="cert-list__title">MOS — PowerPoint 2019 Associate</span>
+                    <span class="cert-list__issuer">Microsoft · May 30, 2024</span>
+                  </div>
+                  <a class="credential-link" href="assets/certs/Microsoft-PowerPoint-2019.pdf" target="_blank" rel="noopener" aria-label="View PDF — Microsoft PowerPoint 2019 certificate (opens in new tab)">View PDF ↗</a>
+                </li>
+                <li>
+                  <div>
+                    <span class="cert-list__title">MOS — Word 2019 Associate</span>
+                    <span class="cert-list__issuer">Microsoft · Mar 12, 2024</span>
+                  </div>
+                  <a class="credential-link" href="assets/certs/Microsoft-Word-2019.pdf" target="_blank" rel="noopener" aria-label="View PDF — Microsoft Word 2019 certificate (opens in new tab)">View PDF ↗</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="course-list reveal">
+              <div class="certs__head">
+                <p class="education__label">Course completions</p>
+                <span>03</span>
+              </div>
+              <ul class="cert-list">
+                <li>
+                  <div>
+                    <span class="cert-list__title">Introduction to IoT and Digital Transformation</span>
+                    <span class="cert-list__issuer">Cisco Networking Academy · Feb 23, 2026</span>
+                  </div>
+                  <a class="credential-link" href="assets/certs/Cisco-IoT-Digital-Transformation.pdf" target="_blank" rel="noopener" aria-label="View PDF — Cisco IoT course certificate (opens in new tab)">View PDF ↗</a>
+                </li>
+                <li>
+                  <div>
+                    <span class="cert-list__title">Getting Started with Cisco Packet Tracer</span>
+                    <span class="cert-list__issuer">Cisco Networking Academy · Feb 6, 2026</span>
+                  </div>
+                  <a class="credential-link" href="assets/certs/Cisco-Packet-Tracer.pdf" target="_blank" rel="noopener" aria-label="View PDF — Cisco Packet Tracer course certificate (opens in new tab)">View PDF ↗</a>
+                </li>
+                <li>
+                  <div>
+                    <span class="cert-list__title">Java Foundations</span>
+                    <span class="cert-list__issuer">Oracle Academy · Dec 29, 2024</span>
+                  </div>
+                  <a class="credential-link" href="assets/certs/Oracle-Java-Foundations.pdf" target="_blank" rel="noopener" aria-label="View PDF — Oracle Java Foundations certificate (opens in new tab)">View PDF ↗</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 · RECOGNITION -->
+    <section class="section recognition" id="recognition" aria-labelledby="recognition-title">
+      <div class="shell">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span>06</span> Recognition</p>
+          <p class="section-head__note">Achievements · Competitions · Awards</p>
+        </div>
+
+        <div class="recognition__grid">
+          <div class="recognition__intro reveal">
+            <h2 id="recognition-title" class="display">Evidence of <em>progress.</em></h2>
+            <p>
+              Recognition is listed only where it can be supported by a certificate,
+              academic record, or project documentation.
+            </p>
+          </div>
+
+          <div class="achievement-list reveal">
+            <article>
+              <span class="achievement-list__year">2024—2026</span>
+              <div>
+                <h3>Five industry certifications</h3>
+                <p>Certiport and Microsoft credentials in databases, HTML and CSS, artificial intelligence, Word, and PowerPoint.</p>
+              </div>
+              <a class="credential-link" href="#credentials">View credentials ↑</a>
+            </article>
+            <article>
+              <span class="achievement-list__year">2024—2026</span>
+              <div>
+                <h3>Three recognised course completions</h3>
+                <p>Cisco Networking Academy: IoT and Packet Tracer. Oracle Academy: Java Foundations.</p>
+              </div>
+              <a class="credential-link" href="#credentials">View evidence ↑</a>
+            </article>
+            <article>
+              <span class="achievement-list__year">2023</span>
+              <div>
+                <h3>1st place — Programming Competition</h3>
+                <p>DominiXode IT Week competition, St. Dominic College of Asia.</p>
+              </div>
+              <span class="credential-link">Certificate on file</span>
+            </article>
+            <article>
+              <span class="achievement-list__year">2024—2025</span>
+              <div>
+                <h3>Digital Media Officer, DominiXode</h3>
+                <p>Officership covering announcements, programme graphics, and page engagement.</p>
+              </div>
+              <a class="credential-link" href="#leadership">View role ↑</a>
+            </article>
+            <article>
+              <span class="achievement-list__year">2026</span>
+              <div>
+                <h3>Academic project leadership</h3>
+                <p>Project Manager and UI/UX lead for the AI-Integrated IoT Smart Plate.</p>
+              </div>
+              <a class="credential-link" href="#leadership">View role ↑</a>
+            </article>
+          </div>
+        </div>
+
+        <div class="competition-panel competition-panel--award reveal">
+          <div>
+            <p class="education__label">Competition · 1st place</p>
+            <h3>Programming Competition</h3>
+            <p class="competition-panel__meta">DominiXode · St. Dominic College of Asia · 14 November 2023</p>
+          </div>
+          <div>
+            <p>
+              Held during IT Week 2023 under the theme “Unleashing Your Vision of
+              Tomorrow: Soaring High Beyond 20.” The competition recognised
+              first-place performance alongside teamwork, technical skill, and
+              sportsmanship.
+            </p>
+            <p class="evidence-note">Certificate issued by DominiXode · photograph on file</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 · LEADERSHIP -->
+    <section class="section leadership" id="leadership" aria-labelledby="leadership-title">
+      <div class="shell">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span>07</span> Leadership</p>
+          <p class="section-head__note">Project teams · Student organisation</p>
+        </div>
+
+        <div class="leadership__grid">
+          <div class="leadership__intro reveal">
+            <h2 id="leadership-title" class="display">Leading by making the next step <em>clear.</em></h2>
+            <p>
+              Two kinds of responsibility: coordinating the technical work of a
+              project team, and representing a student organisation through the
+              material it publishes.
+            </p>
+          </div>
+
+          <article class="lead-card reveal">
+            <div class="lead-card__top">
+              <span>2026 · Academic project</span>
+              <span class="project-badge">Completed</span>
+            </div>
+            <h3>Project Manager &amp; UI/UX Lead</h3>
+            <p class="lead-card__org">AI-Integrated IoT Smart Plate</p>
+            <p>
+              Responsible for scope and task planning, user-flow definition,
+              interface design, and coordination between the hardware and software
+              workstreams.
+            </p>
+            <ul class="tags" aria-label="Leadership responsibilities">
+              <li>Scope planning</li>
+              <li>Team coordination</li>
+              <li>User flows</li>
+              <li>Interface design</li>
+            </ul>
+          </article>
+
+          <article class="lead-card reveal">
+            <div class="lead-card__top">
+              <span>2024 — 2025 · Student organisation</span>
+              <span class="project-badge project-badge--done">Officership</span>
+            </div>
+            <h3>Digital Media Officer</h3>
+            <p class="lead-card__org">DominiXode · St. Dominic College of Asia</p>
+            <p>
+              Produced the organisation’s creative public materials — event
+              announcements, programme graphics, and engagement posts — for page
+              activity and BSIT Week 2024–2025.
+            </p>
+            <ul class="tags" aria-label="Officership responsibilities">
+              <li>Announcement graphics</li>
+              <li>Social media</li>
+              <li>Event promotion</li>
+              <li>Visual identity</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="work-gallery reveal">
+          <div class="work-gallery__head">
+            <p class="education__label">Selected design work</p>
+            <span>DominiXode · 2024—2025</span>
+          </div>
+          <div class="work-gallery__grid">
+            <figure>
+              <img src="assets/dominisxode/career-talk-announcement.jpg"
+                   alt="Career Talk announcement poster for 30 April 2025 featuring speaker Sylvan Cahilog"
+                   width="700" height="1080" loading="lazy" decoding="async">
+              <figcaption><strong>Event announcement</strong>Career Talk · April 2025</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/dominisxode/bsit-week-programme.jpg"
+                   alt="BSIT Week 2024 to 2025 programme graphic listing three days of activities"
+                   width="700" height="1244" loading="lazy" decoding="async">
+              <figcaption><strong>Programme graphic</strong>BSIT Week · 2024—2025</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/dominisxode/engagement-post.jpg"
+                   alt="Comic-style Goodluck Spartans engagement graphic"
+                   width="700" height="700" loading="lazy" decoding="async">
+              <figcaption><strong>Engagement post</strong>Goodluck Spartans</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/dominisxode/org-identity-post.jpg"
+                   alt="Playing-card graphic with a Spartan illustration for the DominiXode page"
+                   width="700" height="700" loading="lazy" decoding="async">
+              <figcaption><strong>Identity post</strong>Sparta cards</figcaption>
+            </figure>
+          </div>
+          <p class="work-gallery__note">
+            Four graphics produced for the organisation’s public page. Source files
+            are retained by DominiXode.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 · CONTACT -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="shell contact__inner">
+        <p class="eyebrow eyebrow--light reveal"><span>08</span> The next step</p>
+
+        <h2 id="contact-title" class="contact__title reveal">
+          Let’s make work<br>feel <em>lighter.</em>
+        </h2>
+
+        <p class="contact__copy reveal">
+          I’m seeking an entry-level IT role in technical support, data operations,
+          or front-end development. If my background fits a role on your team, I’d
+          like to hear from you.
+        </p>
+
+        <a class="contact__email reveal" href="mailto:dnadaleduc@gmail.com">
+          dnadaleduc@gmail.com
+          <span aria-hidden="true">↗</span>
+        </a>
+
+        <div class="contact__details reveal">
+          <a href="tel:+639125857240">0912 585 7240</a>
+          <span>Imus, Cavite, Philippines</span>
+          <a href="assets/Daniel-Nadal-Resume.pdf" download>Résumé ↓</a>
+        </div>
+
+        <footer class="footer">
+          <p>© 2026 Daniel Angelo C. Nadal</p>
+          <p>Designed &amp; built with HTML + CSS</p>
+          <a href="#top">Back to top ↑</a>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
