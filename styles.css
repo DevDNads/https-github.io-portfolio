@@ -1996,7 +1996,7 @@ button, input, textarea, select { font: inherit; }
   }
 }
 @keyframes reveal-rise {
-  from { opacity: 0; transform: translateY(18px); }
+  from { opacity: 0.82; transform: translateY(10px); }
   to { opacity: 1; transform: none; }
 }
 
